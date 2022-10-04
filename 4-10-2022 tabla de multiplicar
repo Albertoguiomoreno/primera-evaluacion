@@ -1,0 +1,5 @@
+def tabla_1():
+    tabla=input("dime un numero")
+    for a in range(1,10):
+        print(str(tabla)+"*"+str(a)+"="+str(int(tabla)*a))
+tabla_1()
