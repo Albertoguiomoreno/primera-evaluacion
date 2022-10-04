@@ -1,0 +1,2 @@
+eyy=input("hola, ¿como te llamas?")
+print("feliz cumpleaños "+eyy)
