@@ -1,0 +1,7 @@
+def sumadepares():
+    suma_par=0
+    for cont in range(0,100,2):
+        print(cont)
+        suma_par=suma_par+cont
+    print("suma de los pares="+str(suma_par))
+sumadepares()
