@@ -1,0 +1,7 @@
+def detectordeprimos():
+    num=int(input("dame un numero entero: "))
+    for cont in range(num-1,0,-1):
+        resto=num%cont
+        if(resto==0)
+        print(resto)
+detectordeprimos()
