@@ -1,0 +1,14 @@
+def cuentabancaria():
+    saldo=0
+    saldo=int(input("ingrese una cantidad: "))
+    deseo=int(input("cuanto desea retirar: "))
+    hola=True
+    while(hola==True):
+        if(deseo<saldo):
+            hola=False
+            saldo=(saldo-deseo)
+            print(saldo)
+        else:
+            hola=True
+            print("no hay suficiente saldo")
+cuentabancaria()
