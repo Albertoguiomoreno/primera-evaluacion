@@ -12,7 +12,8 @@ def cuentabancaria():
         if(deseo%5!=0):
             hola=True
             print("no se puede retirar esta cantidad")
-        if(deseo>saldo):
-            hola=True
-            print("no hay suficiente saldo")
+        else:
+            if(deseo>saldo):
+                hola=True
+                print("no hay suficiente saldo")
 cuentabancaria()
