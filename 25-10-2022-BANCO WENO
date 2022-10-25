@@ -1,0 +1,43 @@
+def muestramenu():
+    print("*********************************")
+    print("*            MENU                *")
+    print("*********************************")
+    print("1: meter dinero")
+    print("2: sacar dinero")
+    print("3: salir")
+
+
+def sacardinero(saldo):
+    cantidad=int(input("¿cuanto desea retirar?"))
+    saldo=saldo-cantidad
+    print("tienes: "+str(saldo))
+    return(saldo)
+    
+    
+def meterdinero(saldo):
+    dinero=int(input("¿Cuanto desea ingresar?"))
+    saldo=dinero+saldo
+    print("tienes: "+str(saldo))
+    return(saldo)
+    
+    
+    
+def main():
+    saldo=0
+    seguir=True
+    while(seguir==True):
+        muestramenu()
+        respuesta=int(input("que desea hacer"))
+        if(respuesta==1):
+            saldo=meterdinero(saldo)
+            seguir=True
+        if(respuesta==2):
+            saldo=sacardinero(saldo)
+            seguir=True
+        if(respuesta==3):
+            salir()
+            seguir=False
+            print("¡Muchas gracias! Hasta pronto.")
+
+
+main()
