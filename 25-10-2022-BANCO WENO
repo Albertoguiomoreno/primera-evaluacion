@@ -17,15 +17,17 @@ def sacardinero(saldo):
         else:
             saldo=saldo-cantidad
             hola=False
-            print("tienes: "+str(saldo))
+            print("tienes: "+str(saldo)+"€")
         return(saldo)
     
     
 def meterdinero(saldo):
-    dinero=int(input("¿Cuanto desea ingresar?"))
+    dinero=int(input("¿Cuanto desea ingresar?: "))
     saldo=dinero+saldo
-    print("tienes: "+str(saldo))
+    print("tienes: "+str(saldo)+"€")
     return(saldo)
+    
+
     
     
     
@@ -34,7 +36,7 @@ def main():
     seguir=True
     while(seguir==True):
         muestramenu()
-        respuesta=int(input("que desea hacer"))
+        respuesta=int(input("¿que desea hacer?: "))
         if(respuesta==1):
             saldo=meterdinero(saldo)
             seguir=True
@@ -42,7 +44,6 @@ def main():
             saldo=sacardinero(saldo)
             seguir=True
         if(respuesta==3):
-            salir()
             seguir=False
             print("¡Muchas gracias! Hasta pronto.")
 
