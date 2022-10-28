@@ -8,10 +8,17 @@ def muestramenu():
 
 
 def sacardinero(saldo):
-    cantidad=int(input("¿cuanto desea retirar?"))
-    saldo=saldo-cantidad
-    print("tienes: "+str(saldo))
-    return(saldo)
+    hola=True
+    while(hola==True):
+        cantidad=int(input("¿cuanto desea retirar?"))
+        if (cantidad>saldo):
+            hola=True
+            print("no hay suficiente saldo")
+        else:
+            saldo=saldo-cantidad
+            hola=False
+            print("tienes: "+str(saldo))
+        return(saldo)
     
     
 def meterdinero(saldo):
