@@ -1,0 +1,11 @@
+def prueba():
+    hola=True
+    while hola==True:
+        palabra=input("di tu contraseña: ")
+        if(palabra.islower() or palabra.isupper()):
+            print("nanai")
+            hola=True
+        else:
+            print("ole")
+            hola=False
+prueba()
