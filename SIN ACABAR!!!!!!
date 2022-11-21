@@ -1,0 +1,48 @@
+def encriptador():
+    print("************************")
+    print("******** MENú **********")
+    print("************************")
+    mensaje=input("escriba el mensaje a encriptar: ")
+    print("1. qwerty")
+    print("2. mnbvcx")
+    print("3. qazwsx")
+    deseo=input("en que sistema quiere encriptar: ")
+    
+    if deseo==1:
+        mensaje=qwerty(mensaje)
+        encriptador()
+        print(mensaje)
+    
+    if deseo==2:
+        mensaje=mnbvcx(mensaje)
+        encriptador()
+        print(mensaje)
+        
+    if deseo==3:
+        mensaje=qazwsx(mensaje)
+        encriptador()
+        print(mensaje)
+    
+
+encriptador()
+
+def qwerty(mensaje):
+    entrada="abcdefghijklmnñopqrstuvwxyz"
+    salida="qwertyuiopasdfghjklñzxcvbnm"
+    cambio=str.maketrans(entrada,salida)
+    mensaje=(mensaje.translate(cambio))
+    return(mensaje)
+    
+def mnbvcx(mensaje):
+    entrada="abcdefghijklmnñopqrstuvwxyz"
+    salida="mnbvcxzñlkjhgfdsapoiuytrewq"
+    cambio=str.maketrans(entrada,salida)
+    mensaje=(mensaje.translate(cambio))
+    return(mensaje)
+    
+def qazwsx(mensaje):
+    entrada="abcdefghijklmnñopqrstuvwxyz"
+    salida="qazwsxedcrfvtgbyhnujmikolpñ"
+    cambio=str.maketrans(entrada,salida)
+    mensaje=(mensaje.translate(cambio))
+    return(mensaje)
