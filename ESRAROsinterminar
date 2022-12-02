@@ -1,0 +1,77 @@
+def esvocal(letra):
+    return letra in "aeiou"
+    
+    
+def palabras():
+    
+    #-------------------------------------------------------------------------------------
+    a=True
+    while a==True:
+        palabra1=input("dime tu primera palabra: ")
+        if len(palabra1)<1 or len(palabra1)>10:
+            print("esta palabra no es valida por su longitud")
+            a=True
+        else:
+            print("okay")
+            a=False
+    consonantes1=0
+    for letra in palabra1:
+        if letra.isalpha and not esvocal(letra):
+            consonantes1+=1
+     
+    clave=3
+    alfabeto="abcdefghijklmnñopqrstuvwxyz"        
+    for valor in palabra1:
+        if valor in alfabeto:
+            indice=alfabeto.find(valor)
+            indice+=clave
+            if indice>=27:
+                indice-=27
+                cifrado+=alfabeto[indice]
+         
+    print(cifrado)
+    
+    #--------------------------------------------------------------------------------------
+    b=True
+    while b==True:
+        palabra2=input("dime tu segunda palabra: ")
+        if len(palabra2)<1 or len(palabra2)>10:
+            print("esta palabra no es valida por su longitud")
+            b=True
+        else:
+            print("okay")
+            b=False
+    
+    consonantes2=0
+    for letra in palabra2:
+        if letra.isalpha and not esvocal(letra):
+            consonantes2+=1
+            
+      #------------------------------------------------------------------------------------      
+    c=True
+    while c==True:
+        palabra3=input("dime tu tercera palabra: ")
+        if len(palabra3)<1 or len(palabra3)>10:
+            print("esta palabra no es valida por su longitud")
+            c=True
+        else:
+            print("okay")
+            c=False
+    
+    consonantes3=0
+    for letra in palabra3:
+        if letra.isalpha and not esvocal(letra):
+            consonantes3+=1
+    #-------------------------------------------------------------------------------------
+    desorden=(consonantes1, consonantes2, consonantes3)
+    orden=sorted(desorden)
+    #-------------------------------------------------------------------------------------
+    
+    
+    print(palabra1+palabra2+palabra3)
+    print("las consonantes en la primera palabra son: "+str(consonantes1))
+    print("las consonantes en la segunda palabra son: "+str(consonantes2))
+    print("las consonantes en la tercera palabra son: "+str(consonantes3))
+    print(orden)
+    
+palabras()
